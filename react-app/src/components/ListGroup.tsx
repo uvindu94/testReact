@@ -5,12 +5,12 @@ function ListGroup() {
 
 //   items = [];
 
-const HandleEvent=(event:MouseEvent)=>console.log(event.screenX)
+const handleClick = (e:MouseEvent)=>console.log(e.clientX, e.clientY);
 
   function getMessage() {
     if (items.length === 0) return <p>No items found</p>;
-    return items.map((item,index) => (
-      <li key={item} className="list-group-item" onClick={HandleEvent}>
+    return items.map((item) => (
+      <li key={item} className="list-group-item" onClick={handleClick}>
         {item}
       </li>
     ));
